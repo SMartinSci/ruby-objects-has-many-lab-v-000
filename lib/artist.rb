@@ -1,3 +1,5 @@
+require 'pry'
+
 class Artist 
   attr_accessor :name
   
@@ -8,8 +10,14 @@ class Artist
     @@all << self
   end
   
+<<<<<<< HEAD
   def self.all
     @@all
+=======
+  def add_song(song)
+    @songs << song
+   song.artist = self
+>>>>>>> 8249a8558d9f0f419a7b9ffa9ead4df6faa1faea
   end
   
   def add_song(song)
@@ -26,6 +34,13 @@ class Artist
   end
 
   def self.song_count
+<<<<<<< HEAD
     Song.all.count
+=======
+    @songs.each do |song|
+      @song_count[song] = @songs.count(song)
+    end
+    @song_count
+>>>>>>> 8249a8558d9f0f419a7b9ffa9ead4df6faa1faea
   end
 end
